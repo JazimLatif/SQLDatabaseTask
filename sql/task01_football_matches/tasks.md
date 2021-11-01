@@ -17,6 +17,8 @@ football=# SELECT * FROM matches WHERE season=2017
 ```sql
 <!-- Copy solution here -->
 
+football=# SELECT * FROM matches WHERE hometeam='Barcelona' OR awayteam ='Barcelona';
+
 
 ```
 
@@ -24,6 +26,8 @@ football=# SELECT * FROM matches WHERE season=2017
 
 ```sql
 <!-- Copy solution here -->
+
+football=# SELECT name FROM divisions WHERE country='Scotland';
 
 
 ```
@@ -33,6 +37,13 @@ football=# SELECT * FROM matches WHERE season=2017
 ```sql
 <!-- Copy solution here -->
 
+football=# SELECT code FROM divisions WHERE name='Bundesliga';
+
+(Gives D1)
+
+football=# SELECT COUNT(division_code) FROM matches WHERE division_code='D1' AND hometeam='Freiburg' OR awayteam='Freiburg'
+
+(Gives 459)
 
 ```
 
@@ -40,6 +51,8 @@ football=# SELECT * FROM matches WHERE season=2017
 
 ```sql
 <!-- Copy solution here -->
+
+SELECT DISTINCT hometeam FROM matches WHERE hometeam LIKE '%City%';
 
 
 ```
@@ -49,6 +62,9 @@ football=# SELECT * FROM matches WHERE season=2017
 ```sql
 <!-- Copy solution here -->
 
+football=# SELECT code FROM divisions WHERE country='France';
+
+football=# SELECT COUNT (DISTINCT hometeam) FROM matches WHERE division_code='F1' OR division_code='F2';
 
 ```
 
