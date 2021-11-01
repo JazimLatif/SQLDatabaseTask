@@ -7,6 +7,8 @@ Each of the questions/tasks below can be answered using a `SELECT` query. When y
 ```sql
 <!-- Copy solution here -->
 
+football=# SELECT * FROM matches WHERE season=2017
+
 
 ```
 
