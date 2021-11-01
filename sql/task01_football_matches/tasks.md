@@ -72,6 +72,7 @@ football=# SELECT COUNT (DISTINCT hometeam) FROM matches WHERE division_code='F1
 
 ```sql
 <!-- Copy solution here -->
+football=# SELECT * FROM matches WHERE hometeam='Swansea' AND awayteam ='Huddersfield' OR hometeam ='Huddersfield' AND awayteam ='Swansea';
 
 
 ```
@@ -80,6 +81,11 @@ football=# SELECT COUNT (DISTINCT hometeam) FROM matches WHERE division_code='F1
 
 ```sql
 <!-- Copy solution here -->
+football=# SELECT code FROM divisions WHERE name ='Eredivisie';
+
+football=# SELECT COUNT (*) FROM matches WHERE ftr='D' AND division_code='N1' AND season BETWEEN 2010 AND 2015;
+
+
 
 
 ```
